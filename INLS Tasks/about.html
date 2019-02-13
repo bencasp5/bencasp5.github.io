@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>About</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600|Source+Code+Pro" rel="stylesheet" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js" type="text/javascript"></script><![endif]-->
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>		
+		<script src="js/skel.min.js">
+		{
+			prefix: 'css/style',
+			preloadStyleSheets: true,
+			resetCSS: true,
+			boxModel: 'border',
+			grid: { gutters: 30 },
+			breakpoints: {
+				wide: { range: '1200-', containers: 1140, grid: { gutters: 50 } },
+				narrow: { range: '481-1199', containers: 960 },
+				mobile: { range: '-480', containers: 'fluid', lockViewport: true, grid: { collapse: true } }
+			}
+		}
+		</script>
+		<script>
+			$(function() {
+
+				// Note: make sure you call dropotron on the top level <ul>
+				$('#main-nav > ul').dropotron({ 
+					offsetY: -10 // Nudge up submenus by 10px to account for padding
+				});
+
+			});
+		</script>
+		<script>
+			// DOM ready
+			$(function() {
+    
+			// Create the dropdown base
+			$("<select />").appendTo("nav");
+   
+			// Create default option "Go to..."
+			$("<option />", {
+				"selected": "selected",
+				"value"   : "",
+				"text"    : "Menu"
+			}).appendTo("nav select");
+   
+			// Populate dropdown with menu items
+			$("nav a").each(function() {
+			var el = $(this);
+			$("<option />", {
+				"value"   : el.attr("href"),
+				"text"    : el.text()
+			}).appendTo("nav select");
+			});
+   
+			// To make dropdown actually work
+			// To make more unobtrusive: http://css-tricks.com/4064-unobtrusive-page-changer/
+			$("nav select").change(function() {
+				window.location = $(this).find("option:selected").val();
+			});
+  
+			});
+		</script>	
+	</head>
+	<body>
+		<div id="header_container">		
+		    <div class="container">
+			<!-- Header -->
+				<div id="header" class="row">
+					<div class="4u">
+						<div class="wrapper">
+							<h1><a href="index.html">About Ben Casparius</a></h1>
+							
+					    </div>
+					</div>
+					
+					<nav id="main-nav" class="8u">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a class="active" href="about.html">About</a></li>
+							<li><a href="interests.html">Interests</a></li>
+														
+							<li>
+								<a href="classes/index.html">Classes</a>			
+									<ul>
+										<li><a href="https://sakai.unc.edu/portal/site/09abda67-c1ee-4b13-930e-9806756cdcc7">Comm 120</a></li>
+										<li><a href="https://sakai.unc.edu/portal/site/c504235e-2e1a-43ed-9d60-32003eaccbad">ENGL 125</a></li>
+										<li>
+											<a href="https://ils.unc.edu/courses/2018_fall/inls161_003/index.html">INLS 161</a>
+												<ul>
+													<li><a href="classes/INLS%20161/3.html">Task 3</a></li>
+													<li><a href="classes/INLS%20161/4.html">Task 4</a></li>
+													<li><a href="classes/INLS%20161/5.html">Task 5</a></li>
+													<li><a href="classes/INLS%20161/6.html">Task 6</a></li>
+													
+												</ul>
+										</li>
+									</ul>
+							</li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>	
+
+			
+		    <div class="container">						
+				<div class="12u">
+					<div id="wrapper-banner">						
+						<!-- Banner -->								
+						<div id="banner">
+							<a href="#"><img src="images/chungus.jpeg" alt="banner image" /></a>
+						</div>	
+					</div>
+				</div>						
+			</div>
+			
+        </div>		
+
+		<div id="site_content">
+			<div class="container">			
+			
+				<!-- Features -->			
+				<div class="row">									
+					
+					<section class="4u">
+						<div id="sidebar">
+							<section class="12u">
+                               <h3>Last Updated</h3> 
+                                <script>
+					<!-- Display Date -->
+					<!-- This script and many more are available free online at -->
+					<!-- The JavaScript Source!! http://javascript.internet.com -->
+					<!-- Begin
+						var days = new Array(8);
+						days[1] = "Sunday";
+						days[2] = "Monday";
+						days[3] = "Tuesday";
+						days[4] = "Wednesday";
+						days[5] = "Thursday";
+						days[6] = "Friday";
+						days[7] = "Saturday";
+						var months = new Array(13);
+						months[1] = "January";
+						months[2] = "February";
+						months[3] = "March";
+						months[4] = "April";
+						months[5] = "May";
+						months[6] = "June";
+						months[7] = "July";
+						months[8] = "August";
+						months[9] = "September";
+						months[10] = "October";
+						months[11] = "November";
+						months[12] = "December";
+						var dateObj = new Date(document.lastModified)
+						var wday = days[dateObj.getDay() + 1]
+						var lmonth = months[dateObj.getMonth() + 1]
+						var date = dateObj.getDate()
+						var fyear = dateObj.getYear()
+						if (fyear < 2000) fyear = fyear + 1900
+						document.write("" + wday + ", " + date + " " + lmonth + " " + fyear)
+					// End -->
+				</script> 
+								<img src="images/contact_info.png" alt = "contact info">
+							</section>
+
+					<section class="8u">				
+						
+						
+						<p>My name is Ben Casparius. I am a sophomore at UNC from Westport, Connecticut. 
+						I play baseball and am a Third basemen/ Right handed pitcher. 
+						My mom stacey, dad Phil, and sister Cate make up my family. 
+						Also inlcuding my dogs, Fenway and Maggie. 
+						I grew up loving baseball and other sports my entire childhood. 
+						My dream is to play Major League Baseball, but to also play at a division 1 school. 
+						I chose UNC because I believed it was the best fit athletically and academically.
+						You can learn more about me from my <a href="resume.pdf">resume</a></p>
+					</section>					
+
+				</div>
+
+		
+		<div class="container">					
+			<!-- Footer -->
+				<footer>
+					<p><a href="https://twitter.com/bk_asparius"><img src="images/twitter.png" alt="twitter" /></a></p>
+					<p><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="interests.html">Interests</a> | <a href="classes/index.html">Classes</a> | <a href="contact.php">Contact Us</a></p>
+					<p>Copyright &copy; Ben Casparius</p>
+				</footer>		
+		</div>		
+			
+	</body>
+</html>
